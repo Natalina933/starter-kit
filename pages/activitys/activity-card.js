@@ -4,6 +4,9 @@ import Image from 'next/image'
 const ActivityCard = (props) => {
     const { title, description, price, rating, image } = props.activity;
     return (
+
+        
+
         <div className='max-w-[260px] border bg-[#1b1b1b1b] shadow-md rounded-2xl'>
             <Image
                 src={image}
@@ -15,16 +18,16 @@ const ActivityCard = (props) => {
             <div className='relative h-48 p-3 space-y-2'>
                 <h1 className='font-medium text-2xl'>{title}</h1>
                 <h3>rating</h3>
-                <p className='max-h-24 break-words'>{description}</p>
+                <p className='max-h-24 break-words text-sm'>{description}</p>
                 <div className='absolute w-full pr-6 bottom-2 flex justify-between items-center'>
-                    <span className='text-xl'>{price}€</span>
+                    <span className='text-sm'>{price}€</span>
                     <button>
                         <svg xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
                             strokeWidth="1.5"
                             stroke="currentColor"
-                            class="w-6 h-6">
+                            className="w-6 h-6">
                             <path
                                 strokeLinecap="round"
                                 strokeLinejoin="round"

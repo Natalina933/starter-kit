@@ -2,6 +2,7 @@ import Head from "next/head";
 import SideNavbar from "../components/SideNavbar";
 import TitleActivitys from "../components/TitleActivitys";
 import Activitys from "./activitys";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <SideNavbar/>
       <TitleActivitys/>
       <Activitys/>
+      <Footer/>
       </div>
   );
 }
