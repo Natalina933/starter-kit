@@ -4,6 +4,11 @@
 
 @layer base {
     body {
-        @apply bg-gray-100;/*intégrer toutes les classes d'utilitaires existantes dans votre propre CSS personnalisé*/
+        @apply bg-slate-900;/*intégrer toutes les classes d'utilitaires existantes dans votre propre CSS personnalisé*/
+        color :white
+
+    }
+    html{
+        height: 100%;
     }
 }
