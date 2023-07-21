@@ -1,27 +1,22 @@
-import React from 'react'
-import ActivityCard from './activity-card'
-import { activitys } from "../../data/activitys"
+import React from 'react';
+import ActivityCard from './activity-card';
+import { activitys } from '../../data/activitys';
 
 const GalleryActivitys = () => {
-    return (
-        <div className='grid grid-cols-12 h-full'>
+  return (
+    <div className="flex flex-row justify-end h-full">
+      <div className="flex-none border p-4">
+        Activités
+      </div>
+      <div className="flex-1 border p-4 flex flex-wrap gap-3 justify-end">
+        {activitys.map((activity) => (
+          <div key={activity.id} className="w-1/4 mb-4">
+            <ActivityCard activity={activity} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-            <div className='col-span-2 border'>
-                Activités
-            </div>
-            <div className='col-span-10 border'>
-                <div className='grid grid-cols-12 gap-3'>
-                    {activitys.map((activity) => (
-
-                        <div key={activity.id} className='col-span-3'>
-                            <ActivityCard activity={activity} />
-                        </div>
-                    )
-                    )}
-                </div>
-            </div>
-        </div>
-    )
-}
-
-export default GalleryActivitys
+export default GalleryActivitys;
