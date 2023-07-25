@@ -65,7 +65,7 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-/* Remplacer ".grid" par ".flex" */
+
 .flex {
   display: flex;
   align-items: center;
@@ -74,7 +74,7 @@
   max-width: 800px;
 }
 
-/* Renommer ".card-container" en ".card" */
+
 .card {
   margin: 1rem;
   padding: 1.5rem;

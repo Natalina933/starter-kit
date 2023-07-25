@@ -1,29 +1,27 @@
 import React, { useEffect, useState } from 'react'
-//usestate used to track states
-//useeffect is used to render API's after fetching or loading
+// useState utilisé pour suivre les états
+// useEffect est utilisé pour afficher les données de l'API après leur récupération ou leur chargement
 const Activitys = () => {
-  const [posts, setPosts] = useState([]);//usestate having initial value as null array
+  const [posts, setPosts] = useState([]);//usestate ayant la valeur initiale comme tableau nul
   const fetchData = () => {
-    //fetch is used to fetch data from external source like url etc.
+  // fetch est utilisé pour récupérer des données à partir d'une source externe telle qu'une URL, etc.
     fetch('https://jsonplaceholder.typicode.com/posts')
       .then((response) => {
-        return response.json()//after fetch data from url it return data as json format
+        return response.json()// après avoir récupéré les données de l'URL, les données sont renvoyées au format JSON
       }).then((data) => {
-        setPosts(data) //after that we have the data in json format we are ready to use and track the states also
+        setPosts(data) // une fois que nous avons les données au format JSON, nous sommes prêts à les utiliser et à suivre les états également
       })
   }
   useEffect(() => {
-    fetchData();//used to render data after loading
+    fetchData();// utilisé pour afficher les données après le chargement
   }, []);
   return (
     <div className='flex-col my-10'>
       <h1 className='text-5xl font-bold text-gray-800 text-center my-10'>Nos <span className='text-blue-600'>Activités</span></h1>
       {
         posts.length > 0 && (
-          //flex is used to organize data in horizontal way
           <div className='flex justify-center items-center '>
-            {/* grid is used in flex to separate as blocks */ }
-            <div className='grid ml:grid-cols-4 grid-cols-1 gap-5 '>
+           <div className='flex ml:flex-cols-4 flex-cols-1 gap-5 '>
 {
   posts.map((post)=>{})
 }
