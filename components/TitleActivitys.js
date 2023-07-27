@@ -18,7 +18,7 @@ const Activitys = () => {
   }, []);
   return (
     <div className="flex-col my-10">
-      <h1 className="text-5xl font-bold text-gray-800 text-center my-10">
+      <h1 className="text-5xl font-bold text-gray-100 text-center my-10">
         Nos <span className="text-blue-600">Activités</span>
       </h1>
       {posts.length > 0 && (
